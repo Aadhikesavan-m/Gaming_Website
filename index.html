@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In to Lucy™</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles/login.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                Lucy™
+            </div>
+            <div class="tagline">Innovation Starts Here</div>
+            
+            <div class="app-name">LUCYIdeas™</div>
+            <p>You will be testing one of Lucy™'s core applications</p>
+            
+            <div class="app-name">What to Expect?</div>
+            <ul class="features">
+                <li><i class="fas fa-check"></i> Intuitive idea management</li>
+                <li><i class="fas fa-check"></i> Collaborative workspace</li>
+                <li><i class="fas fa-check"></i> AI-powered suggestions</li>
+            </ul>
+            
+            <div class="app-name">Other Future Applications</div>
+            <ul class="features">
+                <li><i class="fas fa-rocket"></i> LucyProjects™</li>
+                <li><i class="fas fa-chart-line"></i> LucyAnalytics™</li>
+                <li><i class="fas fa-users"></i> LucyTeam™</li>
+            </ul>
+        </div>
+        
+        <div class="right-panel">
+            <div class="login-header">
+                <h1>Log In to Lucy™</h1>
+                <p>Welcome back! Please enter your details</p>
+            </div>
+            
+            <div class="input-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" value="" placeholder="Enter your email">
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Your Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+            
+            <div class="remember">
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember</label>
+            </div>
+            
+            <button class="btn">Log In</button>
+            
+            <div class="signup-link">
+                Don't have an account? <a href="./views/register.html">Sign Up</a>
+            </div>
+            
+            <div class="divider">
+                <hr>
+                <span>Or</span>
+                <hr>
+            </div>
+            
+            <div class="social-login">
+                <div class="social-btn">
+                    <i class="fab fa-google"></i>
+                </div>
+                <div class="social-btn">
+                    <i class="fab fa-apple"></i>
+                </div>
+                <div class="social-btn">
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <p>© 2025 Lucy™. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const loginBtn = document.querySelector('.btn');
+        
+        loginBtn.addEventListener('click', function() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            if (!email || !password) {
+                alert('Please enter both email and password');
+                return;
+            }
+            
+            // Simulate login process
+            loginBtn.textContent = 'Logging in...';
+            loginBtn.disabled = true;
+            
+            setTimeout(function() {
+                alert('Login successful! Welcome to Lucy™');
+                loginBtn.textContent = 'Log In';
+                loginBtn.disabled = false;
+                document.getElementById('password').value = '';
+
+                // 🔥 Redirect to another page
+                window.location.href = "./views/home.html"; 
+                // replace "dashboard.html" with your target page
+            }, 1500);
+        });
+        
+        // Add animation to social buttons
+        const socialBtns = document.querySelectorAll('.social-btn');
+        socialBtns.forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px)';
+                this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+            });
+            
+            btn.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

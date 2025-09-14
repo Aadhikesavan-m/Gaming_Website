@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register for Lucy™</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/register.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                Lucy™
+            </div>
+            <div class="tagline">Innovation Starts Here</div>
+            
+            <div class="app-name">Why Join Lucy™?</div>
+            <ul class="features">
+                <li><i class="fas fa-rocket"></i> Access to cutting-edge AI tools</li>
+                <li><i class="fas fa-lightbulb"></i> Transform your ideas into reality</li>
+                <li><i class="fas fa-users"></i> Collaborate with innovators worldwide</li>
+                <li><i class="fas fa-chart-line"></i> Grow with our expanding platform</li>
+            </ul>
+            
+            <div class="app-name">What You'll Get</div>
+            <ul class="features">
+                <li><i class="fas fa-check"></i> Early access to LUCYIdeas™</li>
+                <li><i class="fas fa-check"></i> Free trial of premium features</li>
+                <li><i class="fas fa-check"></i> Personalized innovation dashboard</li>
+            </ul>
+            
+            <div class="app-name">Coming Soon</div>
+            <ul class="features">
+                <li><i class="fas fa-cogs"></i> LucyProjects™</li>
+                <li><i class="fas fa-chart-pie"></i> LucyAnalytics™</li>
+                <li><i class="fas fa-user-friends"></i> LucyTeam™</li>
+            </ul>
+        </div>
+        
+        <div class="right-panel">
+            <div class="register-header">
+                <h1>Create Your Lucy™ Account</h1>
+                <p>Join the innovation revolution</p>
+            </div>
+            
+            <div class="name-fields">
+                <div class="input-group" style="flex: 1;">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" placeholder="Enter your first name">
+                </div>
+                <div class="input-group" style="flex: 1;">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" placeholder="Enter your last name">
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Create Password</label>
+                <input type="password" id="password" placeholder="Create a strong password">
+            </div>
+            
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" placeholder="Confirm your password">
+            </div>
+            
+            <div class="input-group">
+                <label for="role">I'm primarily a:</label>
+                <select id="role">
+                    <option value="">Select your role</option>
+                    <option value="innovator">Innovator/Creator</option>
+                    <option value="developer">Developer/Engineer</option>
+                    <option value="designer">Designer</option>
+                    <option value="entrepreneur">Entrepreneur</option>
+                    <option value="student">Student</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div class="terms">
+                <input type="checkbox" id="terms">
+                <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>. I understand that Lucy™ may send me communications about my account and services.</label>
+            </div>
+            
+            <div class="terms">
+                <input type="checkbox" id="newsletter">
+                <label for="newsletter">Send me product updates, tips, and occasional surveys to help improve Lucy™.</label>
+            </div>
+            
+            <button class="btn">Create Account</button>
+            
+            <div class="login-link">
+                Already have an account? <a href="../index.html">Log In</a>
+            </div>
+            
+            <div class="divider">
+                <hr>
+                <span>Or</span>
+                <hr>
+            </div>
+            
+            <div class="social-login">
+                <div class="social-btn">
+                    <i class="fab fa-google"></i>
+                </div>
+                <div class="social-btn">
+                    <i class="fab fa-apple"></i>
+                </div>
+                <div class="social-btn">
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <p>© 2025 Lucy™. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const registerBtn = document.querySelector('.btn');
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirm-password');
+        
+        registerBtn.addEventListener('click', function() {
+            const firstName = document.getElementById('firstname').value;
+            const lastName = document.getElementById('lastname').value;
+            const email = document.getElementById('email').value;
+            const passwordVal = password.value;
+            const confirmPasswordVal = confirmPassword.value;
+            const terms = document.getElementById('terms').checked;
+            
+            if (!firstName || !lastName || !email || !passwordVal || !confirmPasswordVal) {
+                alert('Please fill in all required fields');
+                return;
+            }
+            
+            if (passwordVal !== confirmPasswordVal) {
+                alert('Passwords do not match');
+                return;
+            }
+            
+            if (!terms) {
+                alert('Please agree to the Terms of Service and Privacy Policy');
+                return;
+            }
+            
+            // Simulate registration process
+            registerBtn.textContent = 'Creating Account...';
+            registerBtn.disabled = true;
+            
+            setTimeout(function() {
+                alert('Account created successfully! Welcome to Lucy™');
+                registerBtn.textContent = 'Create Account';
+                registerBtn.disabled = false;
+                
+                // 🔥 Redirect after successful registration
+                window.location.href = "../index.html";  
+                // Change "welcome.html" to the page you want to redirect to
+                
+            }, 1500);
+        });
+        
+        // Add animation to social buttons
+        const socialBtns = document.querySelectorAll('.social-btn');
+        socialBtns.forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px)';
+                this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+            });
+            
+            btn.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

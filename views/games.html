@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Games - GameZone</title>
+  <link rel="stylesheet" href="../styles/games.css">
+  
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">GameZone</div>
+    <ul>
+      <li><a href="../views/home.html">Home</a></li>
+      <li><a href="./games.html">Games</a></li>
+      <li><a href="../index.html">About</a></li>
+    </ul>
+    <button class="subscribe-btn"><a href="./register.html" class="subs">Subscribe</a></button>
+  </nav>
+
+  <!-- Games Section -->
+  <section class="games">
+    <div class="seprator">
+      <h2>Categories</h2>
+
+      <ul class="event-categ" id="myBtnContainer">
+        <li class="list-item btn active" onclick="filterSelection('all')">All</li>
+        <li class="list-item btn" onclick="filterSelection('coding')">Coding Games</li>
+        <li class="list-item btn" onclick="filterSelection('logical')">Logical Thinking Games</li>
+        <li class="list-item btn" onclick="filterSelection('sport')">Sports</li>
+      </ul>
+
+    </div>
+    <div class="card-container">
+      <!-- Example Game Cards (20+) -->
+      <div class="card coding">
+        <img src="https://picsum.photos/200/120?random=1" alt="Sudoku">
+        <h3>Sudoku</h3>
+        <p>Play classic sudoku puzzles.</p>
+        <a href="https://sudoku.com/" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card sport">
+        <img src="https://picsum.photos/200/120?random=61" alt="Basketball Stars">
+        <h3>Basketball Stars</h3>
+        <p>1v1 basketball duels online.</p>
+        <a href="https://poki.com/en/g/basketball-stars" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card logical">
+        <img src="https://picsum.photos/200/120?random=41" alt="Sudoku">
+        <h3>Sudoku</h3>
+        <p>Classic number placement puzzles.</p>
+        <a href="https://sudoku.com/" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card coding">
+        <img src="https://picsum.photos/200/120?random=21" alt="CodeCombat">
+        <h3>CodeCombat</h3>
+        <p>Learn programming by playing a fantasy RPG (Python/JS).</p>
+        <a href="https://codecombat.com/" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card sport">
+        <img src="https://picsum.photos/200/120?random=62" alt="Soccer Skills Euro Cup">
+        <h3>Soccer Skills Euro Cup</h3>
+        <p>Fast-paced soccer simulation.</p>
+        <a href="https://poki.com/en/g/soccer-skills-euro-cup" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card logical">
+        <img src="https://picsum.photos/200/120?random=42" alt="Chess">
+        <h3>Chess</h3>
+        <p>Sharpen your mind with strategic chess games.</p>
+        <a href="https://www.chess.com/play" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card sport">
+        <img src="https://picsum.photos/200/120?random=63" alt="8 Ball Pool">
+        <h3>8 Ball Pool</h3>
+        <p>Classic online pool with friends.</p>
+        <a href="https://www.miniclip.com/games/8-ball-pool-multiplayer/en/" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card logical">
+        <img src="https://picsum.photos/200/120?random=2" alt="Chess">
+        <h3>Chess</h3>
+        <p>Compete in online chess games.</p>
+        <a href="https://www.chess.com/play" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card sport">
+        <img src="https://picsum.photos/200/120?random=64" alt="Tennis Clash">
+        <h3>Tennis Clash</h3>
+        <p>Compete in real-time tennis matches.</p>
+        <a href="https://poki.com/en/g/tennis-clash" target="_blank">Play Now</a>
+      </div>
+      <div class="card coding">
+        <img src="https://picsum.photos/200/120?random=3" alt="Tetris">
+        <h3>Tetris</h3>
+        <p>Stack and clear blocks.</p>
+        <a href="https://tetris.com/play-tetris" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card logical">
+        <img src="https://picsum.photos/200/120?random=43" alt="Checkers">
+        <h3>Checkers</h3>
+        <p>Outthink your opponent in this classic board game.</p>
+        <a href="https://www.coolmathgames.com/0-checkers" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card sport">
+        <img src="https://picsum.photos/200/120?random=65" alt="Golf Battle">
+        <h3>Golf Battle</h3>
+        <p>Fun online mini-golf multiplayer.</p>
+        <a href="https://poki.com/en/g/golf-battle" target="_blank">Play Now</a>
+      </div>
+      <div class="card sport">
+        <img src="https://picsum.photos/200/120?random=4" alt="Crossword">
+        <h3>Crossword</h3>
+        <p>Daily crossword challenges.</p>
+        <a href="https://www.nytimes.com/crosswords" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card sport">
+        <img src="https://picsum.photos/200/120?random=66" alt="Boxing Random">
+        <h3>Boxing Random</h3>
+        <p>Crazy physics boxing duels.</p>
+        <a href="https://poki.com/en/g/boxing-random" target="_blank">Play Now</a>
+      </div>
+
+
+      <div class="card logical">
+        <img src="https://picsum.photos/200/120?random=44" alt="Minesweeper">
+        <h3>Minesweeper</h3>
+        <p>Use deduction to clear the minefield.</p>
+        <a href="https://minesweeperonline.com/" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card sport">
+        <img src="https://picsum.photos/200/120?random=67" alt="Football Masters">
+        <h3>Football Masters</h3>
+        <p>Arcade football game with superpowers.</p>
+        <a href="https://poki.com/en/g/football-masters" target="_blank">Play Now</a>
+      </div>
+
+
+      <div class="card logical">
+        <img src="https://picsum.photos/200/120?random=45" alt="Nonograms">
+        <h3>Nonograms</h3>
+        <p>Picture logic puzzles using number clues.</p>
+        <a href="https://www.nonograms.org/" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card coding">
+        <img src="https://picsum.photos/200/120?random=22" alt="CodinGame">
+        <h3>CodinGame</h3>
+        <p>Algorithmic puzzles & multiplayer coding contests.</p>
+        <a href="https://www.codingame.com/" target="_blank">Play Now</a>
+      </div>
+
+
+      <div class="card sport">
+        <img src="https://picsum.photos/200/120?random=68" alt="Penalty Shooters 2">
+        <h3>Penalty Shooters 2</h3>
+        <p>Win shootouts in penalty kicks.</p>
+        <a href="https://poki.com/en/g/penalty-shooters-2" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card logical">
+        <img src="https://picsum.photos/200/120?random=46" alt="KenKen">
+        <h3>KenKen</h3>
+        <p>Math-based grid logic puzzles.</p>
+        <a href="https://www.kenkenpuzzle.com/" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card sport">
+        <img src="https://picsum.photos/200/120?random=69" alt="Cricket World Cup">
+        <h3>Cricket World Cup</h3>
+        <p>Bat, bowl and win cricket matches.</p>
+        <a href="https://www.miniclip.com/games/cricket-world-cup-2011/en/" target="_blank">Play Now</a>
+      </div>
+      <div class="card logical">
+        <img src="https://picsum.photos/200/120?random=47" alt="Crossword">
+        <h3>Crossword</h3>
+        <p>Exercise word logic with daily puzzles.</p>
+        <a href="https://www.nytimes.com/crosswords" target="_blank">Play Now</a>
+      </div>
+      <div class="card sport">
+        <img src="https://picsum.photos/200/120?random=70" alt="Volley Random">
+        <h3>Volley Random</h3>
+        <p>Funny volleyball physics challenge.</p>
+        <a href="https://poki.com/en/g/volley-random" target="_blank">Play Now</a>
+      </div>
+      <div class="card logical">
+        <img src="https://picsum.photos/200/120?random=48" alt="Mastermind">
+        <h3>Mastermind</h3>
+        <p>Crack the code using logical deduction.</p>
+        <a href="https://www.webgamesonline.com/mastermind/" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card sport">
+        <img src="https://picsum.photos/200/120?random=71" alt="Table Tennis World Tour">
+        <h3>Table Tennis World Tour</h3>
+        <p>Fast-paced ping pong matches.</p>
+        <a href="https://poki.com/en/g/table-tennis-world-tour" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card coding">
+        <img src="https://picsum.photos/200/120?random=23" alt="Codewars">
+        <h3>Codewars</h3>
+        <p>Practice kata challenges in many languages.</p>
+        <a href="https://www.codewars.com/" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card sport">
+        <img src="https://picsum.photos/200/120?random=72" alt="American Football Challenge">
+        <h3>American Football Challenge</h3>
+        <p>Test your quarterback throwing skills.</p>
+        <a href="https://www.crazygames.com/game/american-football-challenge" target="_blank">Play Now</a>
+      </div>
+      <div class="card logical">
+        <img src="https://picsum.photos/200/120?random=49" alt="Einstein Riddle">
+        <h3>Einstein Riddle</h3>
+        <p>Challenging logic grid puzzles.</p>
+        <a href="https://www.einsteinriddle.com/" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card coding">
+        <img src="https://picsum.photos/200/120?random=24" alt="CheckiO">
+        <h3>CheckiO</h3>
+        <p>Python & TypeScript islands with creative puzzles.</p>
+        <a href="https://checkio.org/" target="_blank">Play Now</a>
+      </div>
+      <div class="card sport">
+        <img src="https://picsum.photos/200/120?random=73" alt="Ski King 2024">
+        <h3>Ski King</h3>
+        <p>Race down snowy slopes avoiding obstacles.</p>
+        <a href="https://poki.com/en/g/ski-king" target="_blank">Play Now</a>
+      </div>
+      <div class="card logical">
+        <img src="https://picsum.photos/200/120?random=50" alt="Logic Puzzles">
+        <h3>Logic Puzzles</h3>
+        <p>Classic riddles and deduction challenges.</p>
+        <a href="https://www.logic-puzzles.org/" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card coding">
+        <img src="https://picsum.photos/200/120?random=25" alt="CSS Diner">
+        <h3>CSS Diner</h3>
+        <p>Learn CSS selectors through a fun food-themed game.</p>
+        <a href="https://flukeout.github.io/" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card logical">
+        <img src="https://picsum.photos/200/120?random=51" alt="Lights Out">
+        <h3>Lights Out</h3>
+        <p>Turn off all the lights using logical moves.</p>
+        <a href="https://www.logicgamesonline.com/lightsout/" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card coding">
+        <img src="https://picsum.photos/200/120?random=26" alt="Flexbox Froggy">
+        <h3>Flexbox Froggy</h3>
+        <p>Master CSS flexbox by helping frogs to their lilypads.</p>
+        <a href="https://flexboxfroggy.com/" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card logical">
+        <img src="https://picsum.photos/200/120?random=52" alt="Towers of Hanoi">
+        <h3>Towers of Hanoi</h3>
+        <p>Classic recursive disk-moving puzzle.</p>
+        <a href="https://www.mathsisfun.com/games/towerofhanoi.html" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card sport">
+        <img src="https://picsum.photos/200/120?random=74" alt="Stickman Skate Battle">
+        <h3>Stickman Skate Battle</h3>
+        <p>Perform tricks in skateboarding battles.</p>
+        <a href="https://poki.com/en/g/stickman-skate-battle" target="_blank">Play Now</a>
+      </div>
+      <div class="card logical">
+        <img src="https://picsum.photos/200/120?random=53" alt="Slitherlink">
+        <h3>Slitherlink</h3>
+        <p>Form a single loop using number clues.</p>
+        <a href="https://www.puzzle-loop.com/" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card coding">
+        <img src="https://picsum.photos/200/120?random=27" alt="Grid Garden">
+        <h3>Grid Garden</h3>
+        <p>Learn CSS Grid through gardening puzzles.</p>
+        <a href="https://cssgridgarden.com/" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card logical">
+        <img src="https://picsum.photos/200/120?random=54" alt="Kakuro">
+        <h3>Kakuro</h3>
+        <p>Crossword-style math logic puzzle.</p>
+        <a href="https://www.kakuroconquest.com/" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card sport">
+        <img src="https://picsum.photos/200/120?random=75" alt="Archery World Tour">
+        <h3>Archery World Tour</h3>
+        <p>Hit targets across the globe with bow and arrow.</p>
+        <a href="https://poki.com/en/g/archery-world-tour" target="_blank">Play Now</a>
+      </div>
+      <div class="card logical">
+        <img src="https://picsum.photos/200/120?random=55" alt="BrainBashers">
+        <h3>BrainBashers</h3>
+        <p>Daily riddles, puzzles & logical teasers.</p>
+        <a href="https://www.brainbashers.com/puzzles.asp" target="_blank">Play Now</a>
+      </div>
+      <div class="card coding">
+        <img src="https://picsum.photos/200/120?random=28" alt="Human Resource Machine">
+        <h3>Human Resource Machine</h3>
+        <p>Puzzle game that teaches assembly-like logic.</p>
+        <a href="https://tomorrowcorporation.com/humanresourcemachine" target="_blank">Play Now</a>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/200/120?random=15" alt="Brain Teasers">
+        <h3>Brain Teasers</h3>
+        <p>Challenge your mind daily.</p>
+        <a href="https://www.braingle.com/" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card coding">
+        <img src="https://picsum.photos/200/120?random=35" alt="Karel the Robot">
+        <h3>Karel the Robot (JS/Blockly)</h3>
+        <p>Classic beginner coding puzzles controlling a robot.</p>
+        <a href="https://stanford.edu/~cpiech/karel/ide.html" target="_blank">Play Now</a>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/200/120?random=16" alt="Jigsaw Puzzle">
+        <h3>Jigsaw Puzzle</h3>
+        <p>Solve online jigsaws.</p>
+        <a href="https://www.jigsawplanet.com/" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card coding">
+        <img src="https://picsum.photos/200/120?random=29" alt="Screeps">
+        <h3>Screeps</h3>
+        <p>MMO RTS where you code your units (JavaScript).</p>
+        <a href="https://screeps.com/" target="_blank">Play Now</a>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/200/120?random=17" alt="Word Search">
+        <h3>Word Search</h3>
+        <p>Find words in the grid.</p>
+        <a href="https://thewordsearch.com/" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card coding">
+        <img src="https://picsum.photos/200/120?random=34" alt="Untrusted">
+        <h3>Untrusted</h3>
+        <p>Meta-JavaScript puzzle game where you hack the game code.</p>
+        <a href="https://alexnisnevich.github.io/untrusted/" target="_blank">Play Now</a>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/200/120?random=18" alt="Connect 4">
+        <h3>Connect 4</h3>
+        <p>Drop and connect discs.</p>
+        <a href="https://www.coolmathgames.com/0-connect-4" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card coding">
+        <img src="https://picsum.photos/200/120?random=30" alt="Robocode">
+        <h3>Robocode</h3>
+        <p>Program robot tanks in Java/C# to battle opponents.</p>
+        <a href="https://robocode.sourceforge.io/" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/200/120?random=19" alt="Uno">
+        <h3>Uno Online</h3>
+        <p>Play Uno with friends.</p>
+        <a href="https://poki.com/en/g/uno-online" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card coding">
+        <img src="https://picsum.photos/200/120?random=31" alt="Blockly Games">
+        <h3>Blockly Games</h3>
+        <p>Beginner-friendly block-based programming puzzles.</p>
+        <a href="https://blockly.games/" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card coding">
+        <img src="https://picsum.photos/200/120?random=32" alt="TIS-100-like">
+        <h3>Shenzhen I/O (puzzle)</h3>
+        <p>Electronics / assembly-style programming puzzles.</p>
+        <a href="https://www.zachtronics.com/shenzhen-io/" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/200/120?random=20" alt="Solitaire">
+        <h3>Solitaire</h3>
+        <p>Classic card solitaire.</p>
+        <a href="https://www.solitr.com/" target="_blank">Play Now</a>
+      </div>
+
+      <div class="card coding">
+        <img src="https://picsum.photos/200/120?random=33" alt="Elevator Saga">
+        <h3>Elevator Saga</h3>
+        <p>Optimize elevator control by coding strategy (JS).</p>
+        <a href="https://play.elevatorsaga.com/" target="_blank">Play Now</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Contact us: <a href="mailto:info@gamezone.com">info@gamezone.com</a></p>
+    <p>&copy; 2025 GameZone. All Rights Reserved.</p>
+  </footer>
+
+
+  <script>
+
+    filterSelection("all");
+
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("card"); // select all cards
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {
+          element.className += " " + arr2[i];
+        }
+      }
+    }
+
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+
+    // Add active class to current filter button
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+  </script>
+
+
+</body>
+
+</html>
